@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+// colors
+
+$light-text: #FFFFFF;
+$dark-text: #000000;
+$logo-red: #E82053;
+$light-red: rgba(232, 32, 82, 0.05);
+$light-blue: rgba(119, 189, 233, 0.1);
+$logo-blue: #77BEE9;
+$golden: #c5a90d;
+$dark-blue : #1b252e;
+
+.transparent-header {
+
+    #header-wrap {
+        background-color: #ffffff !important;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%) !important;
+        border-bottom: 0 !important;
+    }
+
+    &.sticky-header {
+        #header-wrap {
+            background-color: #ffffff !important;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%) !important;
+            border-bottom: 0 !important;
+        }
+    }
+}
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .playfair-display;
+}
+
+p,
+a {
+    @extend .rubik;
+}
+
+// Header
+
+
+.menu-item {
+
+    &:hover,
+    &.current {
+        .menu-link {
+            color: $logo-red;
+        }
+    }
+}
+
+.menu-link {
+    color: $dark-text;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    @extend .rubik;
+
+    &:hover {
+        color: $logo-red;
+    }
+}
+
+.heading-block {
+    margin-bottom: 30px !important;
+
+    h2 {
+        font-size: 42px !important;
+        font-weight: 700 !important;
+    }
+
+    h3 {
+        font-size: 34px !important;
+        font-weight: 700 !important;
+    }
+}
+
+// Margins & Paddings
+
+.py-25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+}
+
+.py-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+}
+
+.py-75 {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+}
+
+.py-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+}
+
+.py-150 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+}
+
+.bg-light-red {
+    background: $light-red;
+}
+
+.bg-light-blue {
+    background: $light-blue;
+}
+
+.bg-color {
+    background: #1b252e !important;
+}
+
+// Buttons
+
+.button-border {
+    height: fit-content;
+}
+
+// Text
+
+.text-golden {
+    color: $golden !important;
+}
+
+// Misc
+.golden-line {
+    border-top-color: $golden;
+}
+
+.section {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.hr_accent {
+    border-color: $logo-red;
+    border-top-width: 2px;
+}
+
+//Home page slider
+
+#slider {
+
+    .tp-caption {
+
+        &.revo-slider-emphasis-text {
+            font-family: "Josefin Slab, serif" !important;
+        }
+    }
+}
+
+
+// Feature box home page
+.fbox-content h3,
+.fbox-content .h3 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+.promo-dark {
+    min-height: 20vh;
+    background-color: #000000 !important;
+    display: grid;
+    place-content: center;
+
+    .fw-normal {
+        font-weight: 600 !important;
+        font-size: 28px !important;
+    }
+}
+
+.real-estate-item {
+    .real-estate-item-image {
+        img {
+            width: 100%;
+            aspect-ratio: 7/5;
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+}
+
+#home_mainland_builders {
+    position: relative;
+    background: url('./../assets/DSC00381.JPG') no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $dark-blue;
+        opacity: 0.75;
+    }
+}
+
+#footer {
+    &.footer-red {
+        background-color: $dark-text !important;
+        color: $light-text !important;
+    }
+
+    .widget_nav_menu li a,
+    .widget_links li a,
+    .widget_meta li a,
+    .widget_archive li a,
+    .widget_recent_comments li a,
+    .widget_recent_entries li a,
+    .widget_categories li a,
+    .widget_pages li a,
+    .widget_rss li a {
+        color: $light-text !important;
+    }
+}
+
+//About us
+
+#companiesIntro {
+    .card-img-top {
+        max-width: 100px;
+        margin: 0 auto;
+    }
+}
+
+#about_vision {
+    position: relative;
+    background: url('../../assets/home-slider/pixasquare-4ojhpgKpS68-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #1b252e !important;
+        opacity: 0.85;
+        z-index: -1;
+    }
+}
+
+#about_resources_section {
+    position: relative;
+    z-index: 0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 7%;
+        right: 0%;
+        width: 70%;
+        height: 50%;
+        background: url('../../assets/home-slider/pixasquare-4ojhpgKpS68-unsplash.jpg') no-repeat;
+        background-size: contain;
+        background-position: center right;
+        opacity: 0.85;
+        z-index: -1;
+    }
+}
+
+.tp-bgimg {
+    position: relative;
+    z-index: 0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00000045;
+        z-index: -1;
+    }
+}
+
+.contact-section {
+    margin-top: 70px;
+    .h6 {
+        font-family: Quicksand, sans-serif;
+    }
+
+    
+    @include media-breakpoint-down(sm) {
+        margin-top: 20px
+    }
+}
