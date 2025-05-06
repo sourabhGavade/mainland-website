@@ -15,7 +15,7 @@ $dark-blue : #1b252e;
 
     #header-wrap {
         background-color: #ffffff !important;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%) !important;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.701) 0%, rgba(255, 255, 255, 0) 90%) !important;
         border-bottom: 0 !important;
     }
 
@@ -54,6 +54,26 @@ a {
     @extend .rubik;
 }
 
+.font-md {
+    font-size: 1.5rem;
+    
+    @include media-breakpoint-down(sm) {
+        font-size: 1.2rem;
+    }
+}
+
+.font-xl {
+    font-size: 2.5rem;
+    
+    @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+    }
+}
+
+.text-golden-span {
+    color: $golden !important;
+}
+
 // Header
 
 
@@ -62,7 +82,7 @@ a {
     &:hover,
     &.current {
         .menu-link {
-            color: $logo-red;
+            color: $golden;
         }
     }
 }
@@ -74,7 +94,7 @@ a {
     @extend .rubik;
 
     &:hover {
-        color: $logo-red;
+        color: $golden;
     }
 }
 
@@ -343,3 +363,155 @@ a {
         margin-top: 20px
     }
 }
+
+/* 
+Single Property css
+ */
+ 
+ .slider-element .real-estate-info-wrap {
+    position: absolute;
+    left: auto;
+    bottom: 20px;
+    width: calc(100% - 24px);
+}
+
+.real-estate-price {
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: 50px;
+    z-index: 1;
+}
+
+.real-estate-price h3 {
+    display: block;
+    color: #FFF;
+    font-size: 44px;
+    margin: 0;
+    font-weight: 400;
+}
+
+@media (max-width: 991px) {
+    .real-estate-price {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        right: 0;
+        margin-top: 15px;
+    }
+
+    .slider-element .heading-block >h2 {
+        font-size: 24px;
+    }
+
+    .slider-element .heading-block { width: auto !important; }
+}
+
+.black-overlay {
+    position: relative;
+    z-index: 0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0000006d;
+        z-index: 0;
+    }
+}
+
+.single-property-tagline-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+
+        span {
+            color: $golden !important;
+        }
+    }
+        
+    @include media-breakpoint-down(sm) {
+        top: 20%;
+        left: 12px;
+        width: calc(100% - 24px);
+        transform: unset;
+
+        h2 {
+            font-size: 2rem;
+            text-align: left;
+        }
+    }
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    gap: 15px;
+    
+    @include media-breakpoint-down(sm) {
+        grid-template-columns: 100%;
+        gap: 12px;
+    }
+
+    a {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        text-decoration: none;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: 0.6s ease-in-out;
+        }
+
+        &:hover {
+            background: none;
+
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.form-widget {
+    border-radius: 0 !important;
+
+    .card {
+        border-radius: 4px !important;
+        border: 0;
+        filter: drop-shadow(0px 2px 10px #0000002c);
+
+        .card-header {
+            background-color: $golden;
+            color: $light-text;
+            // border-radius: 0 !important;
+            border: 0;
+        }
+
+        form {
+            input {
+                border-radius: 2px;
+            }
+        }
+    }
+
+}
+
+/* 
+Single Property css
+ */
