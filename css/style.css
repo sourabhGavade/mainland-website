@@ -22743,7 +22743,7 @@ td.actions {
 
 .transparent-header #header-wrap {
   background-color: #ffffff !important;
-  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.701) 0%, rgba(255, 255, 255, 0) 90%) !important;
   border-bottom: 0 !important;
 }
 .transparent-header.sticky-header #header-wrap {
@@ -22775,8 +22775,30 @@ a {
   font-style: normal;
 }
 
+.font-md {
+  font-size: 1.5rem;
+}
+@media (max-width: 575.98px) {
+  .font-md {
+    font-size: 1.2rem;
+  }
+}
+
+.font-xl {
+  font-size: 2.5rem;
+}
+@media (max-width: 575.98px) {
+  .font-xl {
+    font-size: 2rem;
+  }
+}
+
+.text-golden-span {
+  color: #c5a90d !important;
+}
+
 .menu-item:hover .menu-link, .menu-item.current .menu-link {
-  color: #E82053;
+  color: #c5a90d;
 }
 
 .menu-link {
@@ -22785,7 +22807,7 @@ a {
   font-weight: 500 !important;
 }
 .menu-link:hover {
-  color: #E82053;
+  color: #c5a90d;
 }
 
 .heading-block {
@@ -23022,6 +23044,143 @@ a {
   }
 }
 
+/* 
+Single Property css
+ */
+.slider-element .real-estate-info-wrap {
+  position: absolute;
+  left: auto;
+  bottom: 20px;
+  width: calc(100% - 24px);
+}
+
+.real-estate-price {
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.real-estate-price h3, .real-estate-price .h3 {
+  display: block;
+  color: #FFF;
+  font-size: 44px;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 991px) {
+  .real-estate-price {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    right: 0;
+    margin-top: 15px;
+  }
+  .slider-element .heading-block > h2, .slider-element .heading-block > .h2 {
+    font-size: 24px;
+  }
+  .slider-element .heading-block {
+    width: auto !important;
+  }
+}
+.black-overlay {
+  position: relative;
+  z-index: 0;
+}
+.black-overlay:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4274509804);
+  z-index: 0;
+}
+
+.single-property-tagline-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+.single-property-tagline-container h2, .single-property-tagline-container .h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+.single-property-tagline-container h2 span, .single-property-tagline-container .h2 span {
+  color: #c5a90d !important;
+}
+@media (max-width: 575.98px) {
+  .single-property-tagline-container {
+    top: 20%;
+    left: 12px;
+    width: calc(100% - 24px);
+    transform: unset;
+  }
+  .single-property-tagline-container h2, .single-property-tagline-container .h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  gap: 15px;
+}
+@media (max-width: 575.98px) {
+  .gallery-grid {
+    grid-template-columns: 100%;
+    gap: 12px;
+  }
+}
+.gallery-grid a {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+}
+.gallery-grid a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1);
+  transition: 0.6s ease-in-out;
+}
+.gallery-grid a:hover {
+  background: none;
+}
+.gallery-grid a:hover img {
+  transform: scale(1.05);
+}
+
+.form-widget {
+  border-radius: 0 !important;
+}
+.form-widget .card {
+  border-radius: 4px !important;
+  border: 0;
+  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.1725490196));
+}
+.form-widget .card .card-header {
+  background-color: #c5a90d;
+  color: #FFFFFF;
+  border: 0;
+}
+.form-widget .card form input {
+  border-radius: 2px;
+}
+
+/* 
+Single Property css
+ */
 /*-----------------------------------------------------------------------------------
 	shortcodes
 -----------------------------------------------------------------------------------*/
