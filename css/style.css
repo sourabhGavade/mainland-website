@@ -22794,11 +22794,11 @@ a {
 }
 
 .text-golden-span {
-  color: #c5a90d !important;
+  color: #41c50d !important;
 }
 
 .menu-item:hover .menu-link, .menu-item.current .menu-link {
-  color: #c5a90d;
+  color: #41c50d;
 }
 
 .menu-link {
@@ -22807,7 +22807,7 @@ a {
   font-weight: 500 !important;
 }
 .menu-link:hover {
-  color: #c5a90d;
+  color: #41c50d;
 }
 
 .heading-block {
@@ -22895,11 +22895,11 @@ a {
 }
 
 .text-golden {
-  color: #c5a90d !important;
+  color: #41c50d !important;
 }
 
 .golden-line {
-  border-top-color: #c5a90d;
+  border-top-color: #41c50d;
 }
 
 .section {
@@ -23113,7 +23113,7 @@ Single Property css
   font-size: 3rem;
 }
 .single-property-tagline-container h2 span, .single-property-tagline-container .h2 span {
-  color: #c5a90d !important;
+  color: #41c50d !important;
 }
 @media (max-width: 575.98px) {
   .single-property-tagline-container {
@@ -23170,7 +23170,7 @@ Single Property css
   filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.1725490196));
 }
 .form-widget .card .card-header {
-  background-color: #c5a90d;
+  background-color: #41c50d;
   color: #FFFFFF;
   border: 0;
 }
