@@ -17565,7 +17565,7 @@ body:not(.is-expanded-menu):not(.primary-menu-open) .semi-transparent.transparen
 #logo a .logo-default {
   display: flex;
   height: 100%;
-  max-height: 60px;
+  max-height: 50px;
 }
 #logo img {
   display: block;
@@ -22743,13 +22743,18 @@ td.actions {
 
 .transparent-header #header-wrap {
   background-color: #ffffff !important;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.701) 0%, rgba(255, 255, 255, 0) 90%) !important;
+  background: #ffffff;
   border-bottom: 0 !important;
 }
 .transparent-header.sticky-header #header-wrap {
   background-color: #ffffff !important;
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%) !important;
-  border-bottom: 0 !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+#content {
+  background: #eeeeee;
+  background-color: #eeeeee;
 }
 
 .playfair-display, h1, .h1,
@@ -22793,32 +22798,24 @@ a {
   }
 }
 
-.text-golden-span {
-  color: #41c50d !important;
-}
-
 .menu-item:hover .menu-link, .menu-item.current .menu-link {
-  color: #41c50d;
+  color: rgb(255, 203, 5);
 }
 
 .menu-link {
-  color: #000000;
+  color: #2C3E50;
   font-size: 15px !important;
   font-weight: 500 !important;
 }
-.menu-link:hover {
-  color: #41c50d;
-}
-
 .heading-block {
   margin-bottom: 30px !important;
 }
 .heading-block h2, .heading-block .h2 {
-  font-size: 42px !important;
+  font-size: 60px !important;
   font-weight: 700 !important;
 }
 .heading-block h3, .heading-block .h3 {
-  font-size: 34px !important;
+  font-size: 50px !important;
   font-weight: 700 !important;
 }
 
@@ -22882,7 +22879,7 @@ a {
 }
 
 .bg-light-blue {
-  background: rgba(119, 189, 233, 0.1);
+  background: #2C3E50;
 }
 
 .bg-color {
@@ -22894,12 +22891,32 @@ a {
   height: fit-content;
 }
 
-.text-golden {
-  color: #41c50d !important;
+.button-solid-yellow {
+  border: 3px solid rgb(255, 203, 5) !important;
+  background: rgba(255, 203, 5, 0.7) !important;
+  background-color: rgba(255, 203, 5, 0.7) !important;
+  background-color: rgb(255, 203, 5);
+  color: #2C3E50 !important;
+  border-radius: 0px !important;
+  transition: all 0.5s ease-in;
+}
+.button-solid-yellow:hover {
+  background: rgb(255, 203, 5) !important;
+  background-color: rgb(255, 203, 5) !important;
+}
+.button-solid-yellow.button-yellow-outline {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #f0f0f0 !important;
+}
+.button-solid-yellow.button-yellow-outline:hover {
+  background: rgb(255, 203, 5) !important;
+  background-color: rgb(255, 203, 5) !important;
+  color: #2C3E50 !important;
 }
 
-.golden-line {
-  border-top-color: #41c50d;
+.text-golden {
+  color: rgb(255, 203, 5) !important;
 }
 
 .section {
@@ -22908,12 +22925,18 @@ a {
 }
 
 .hr_accent {
-  border-color: #E82053;
   border-top-width: 2px;
 }
 
 #slider .tp-caption.revo-slider-emphasis-text {
   font-family: "Josefin Slab, serif" !important;
+}
+
+.counter {
+  color: #f0f0f0;
+}
+.counter span {
+  color: #f0f0f0;
 }
 
 .fbox-content h3,
@@ -22924,7 +22947,7 @@ a {
 
 .promo-dark {
   min-height: 20vh;
-  background-color: #000000 !important;
+  background-color: #2C3E50 !important;
   display: grid;
   place-content: center;
 }
@@ -22955,13 +22978,13 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #1b252e;
+  background-color: #2C3E50;
   opacity: 0.75;
 }
 
 #footer.footer-red {
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
+  background-color: #2C3E50 !important;
+  color: #f0f0f0 !important;
 }
 #footer .widget_nav_menu li a,
 #footer .widget_links li a,
@@ -22972,7 +22995,7 @@ a {
 #footer .widget_categories li a,
 #footer .widget_pages li a,
 #footer .widget_rss li a {
-  color: #FFFFFF !important;
+  color: #f0f0f0 !important;
 }
 
 #companiesIntro .card-img-top {
@@ -23065,7 +23088,7 @@ Single Property css
 
 .real-estate-price h3, .real-estate-price .h3 {
   display: block;
-  color: #FFF;
+  color: #f0f0f0;
   font-size: 44px;
   margin: 0;
   font-weight: 400;
@@ -23111,9 +23134,6 @@ Single Property css
 .single-property-tagline-container h2, .single-property-tagline-container .h2 {
   text-align: center;
   font-size: 3rem;
-}
-.single-property-tagline-container h2 span, .single-property-tagline-container .h2 span {
-  color: #41c50d !important;
 }
 @media (max-width: 575.98px) {
   .single-property-tagline-container {
@@ -23170,8 +23190,7 @@ Single Property css
   filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.1725490196));
 }
 .form-widget .card .card-header {
-  background-color: #41c50d;
-  color: #FFFFFF;
+  color: #f0f0f0;
   border: 0;
 }
 .form-widget .card form input {
@@ -28564,7 +28583,7 @@ h3.titular-title, .titular-title.h3 {
   font-weight: var(--cnvs-heading-block-font-weight);
   text-transform: var(--cnvs-heading-block-font-transform);
   letter-spacing: var(--cnvs-heading-block-font-spacing);
-  color: var(--cnvs-heading-block-font-color);
+  color: #2C3E50;
 }
 .heading-block h1, .heading-block .h1 {
   font-size: var(--cnvs-heading-block-font-size-h1);
