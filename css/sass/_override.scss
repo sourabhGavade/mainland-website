@@ -24,24 +24,24 @@ $light-2: #F0EDE4;
 .transparent-header {
 
     #header-wrap {
-        background-color: #ffffff !important;
-        background: #ffffff;
+        background-color: $light-1 !important;
+        background: $light-1;
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.701) 0%, rgba(255, 255, 255, 0) 90%) !important;
         border-bottom: 0 !important;
     }
 
     &.sticky-header {
         #header-wrap {
-            background-color: #ffffff !important;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%) !important;
-            border-bottom: 1px solid $light-1 !important;
+            background-color: $light-1 !important;
+            background: linear-gradient(180deg, rgba($light-1, 1) 0%, rgba($light-1, 1) 100%) !important;
+            border-bottom: 1px solid $light-2 !important;
         }
     }
 }
 
 #content {
-    background: #fbf9f7;
-    background-color: #fbf9f7;
+    background: $light-2;
+    background-color: $light-2;
 }
 
 .playfair-display {
@@ -200,7 +200,7 @@ a {
 .bg-light-blue {
     // background: $light-blue;
     // background: #11296B;
-    background: $light-1;
+    background: $dark-1;
     // background: $dark-blue;
 }
 

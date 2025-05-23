@@ -22742,19 +22742,19 @@ td.actions {
 }
 
 .transparent-header #header-wrap {
-  background-color: #ffffff !important;
-  background: #ffffff;
+  background-color: #FAF7F0 !important;
+  background: #FAF7F0;
   border-bottom: 0 !important;
 }
 .transparent-header.sticky-header #header-wrap {
-  background-color: #ffffff !important;
-  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%) !important;
-  border-bottom: 1px solid #FAF7F0 !important;
+  background-color: #FAF7F0 !important;
+  background: linear-gradient(180deg, #faf7f0 0%, #faf7f0 100%) !important;
+  border-bottom: 1px solid #F0EDE4 !important;
 }
 
 #content {
-  background: #fbf9f7;
-  background-color: #fbf9f7;
+  background: #F0EDE4;
+  background-color: #F0EDE4;
 }
 
 .playfair-display, h1, .h1,
@@ -22883,7 +22883,7 @@ body {
 }
 
 .bg-light-blue {
-  background: #FAF7F0;
+  background: #203344;
 }
 
 .bg-highlight {
