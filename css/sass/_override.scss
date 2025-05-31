@@ -28,6 +28,11 @@ $light-2: #F0EDE4;
         background: $light-1;
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.701) 0%, rgba(255, 255, 255, 0) 90%) !important;
         border-bottom: 0 !important;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
     }
 
     &.sticky-header {
@@ -35,6 +40,32 @@ $light-2: #F0EDE4;
             background-color: $light-1 !important;
             background: linear-gradient(180deg, rgba($light-1, 1) 0%, rgba($light-1, 1) 100%) !important;
             border-bottom: 1px solid $light-2 !important;
+        }
+    }
+
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    @include media-breakpoint-down(sm) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 99;
+    }
+
+    .primary-menu {
+        .menu-container {
+            padding-top: 0;
+
+            @include media-breakpoint-down(sm) {
+                padding-top: 25px;
+            }
         }
     }
 }
@@ -74,6 +105,21 @@ a {
     @extend .rubik;
 }
 
+.page-title-content h1,
+.page-title-content .h1 {
+    color: $light-1;
+}
+
+.breadcrumb {
+    .breadcrumb-item {
+        color: rgba($color: $light-1, $alpha: .6);
+
+        &.active {
+            color: $light-1;
+        }
+    }
+}
+
 .font-md {
     font-size: 1.5rem;
 
@@ -90,25 +136,82 @@ a {
     }
 }
 
-.text-golden-span {
-    // color: $golden !important;
+.stretched #gotoTop {
+    bottom: 20px !important;
+}
+
+#floating-whatsapp-icon {
+    position: fixed;
+    z-index: 9;
+    bottom: 80px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $light-1;
+    border: 1px solid $highlight-4;
+    display: grid;
+    place-content: center;
+
+    img {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 // Header
 
-
 .menu-item {
 
-    .menu-link {
-        // color: $light-1;
-    }
 
     &:hover,
     &.current {
         .menu-link {
             color: $highlight-4;
+
+        }
+
+        @include media-breakpoint-down(sm) {
+            .sub-menu-container {
+                .menu-item {
+                    .menu-link {
+                        color: $dark-1;
+                    }
+                }
+            }
         }
     }
+
+    &.sub-menu {
+        .sub-menu-container {
+            background: $highlight-4 !important;
+            .menu-item {
+                .menu-link {
+                    color: $light-1;
+                }
+            }
+        }
+    }
+}
+
+.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item>.menu-link,
+.primary-menu.dark .sub-menu-container .menu-item>.menu-link,
+.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item.current>.menu-link,
+.primary-menu.dark .sub-menu-container .menu-item.current>.menu-link {
+
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+
 }
 
 .menu-link {
@@ -116,10 +219,6 @@ a {
     font-size: 15px !important;
     font-weight: 500 !important;
     @extend .rubik;
-
-    &:hover {
-        // color: $golden;
-    }
 }
 
 .heading-block {
@@ -128,15 +227,32 @@ a {
     h2 {
         font-size: 60px !important;
         font-weight: 700 !important;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 45px !important;
+        }
     }
 
     h3 {
         font-size: 50px !important;
         font-weight: 700 !important;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 35px !important;
+        }
     }
 }
 
 // Margins & Paddings
+
+.mt-50 {
+    margin-top: 50px;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 30px;
+    }
+
+}
 
 .py-25 {
     padding-top: 25px;
@@ -193,6 +309,31 @@ a {
 
 }
 
+.content-wrap {
+    padding-top: 80px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 30px;
+    }
+}
+
+.page-title {
+    padding-top: 100px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 126px;
+        padding-bottom: 80px;
+    }
+}
+
+.page-title-center .page-title-row {
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+        align-items: flex-start;
+    }
+}
+
 .bg-light-red {
     background: $highlight-2;
 }
@@ -205,11 +346,11 @@ a {
 }
 
 .bg-highlight {
-    background: $highlight-4 !important;
+    background: rgba($color: $highlight-4, $alpha: 0.15) !important;
 }
 
 .bg-color {
-    background: #1b252e !important;
+    background: $dark-1 !important;
 }
 
 // Buttons
@@ -224,8 +365,8 @@ a {
     // background-color: rgba(255, 203, 5, 0.7) !important;
     // background-color: rgb(255, 203, 5);
     border: 3px solid $highlight-1 !important;
-    background: rgba($highlight-1, 0.7) !important;
-    background-color: rgba($highlight-1, 0.7) !important;
+    background: rgba($highlight-1, 0.75) !important;
+    background-color: rgba($highlight-1, 0.75) !important;
     background-color: $highlight-1;
     color: $light-1 !important;
     border-radius: 0px !important;
@@ -256,9 +397,6 @@ a {
 }
 
 // Misc
-.golden-line {
-    // border-top-color: $golden;
-}
 
 .section {
     margin-top: 0;
@@ -266,12 +404,21 @@ a {
 }
 
 .hr_accent {
-    // border-color: $logo-red;
+    border-color: $highlight-4;
     border-top-width: 2px;
+
+    &.w-80 {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 .text-white {
     color: $light-1 !important;
+}
+
+.text-white-2 {
+    color: $light-2 !important;
 }
 
 .text-dark {
@@ -292,16 +439,18 @@ a {
 
 .counter {
     color: $highlight-1;
+
     span {
         color: $highlight-1;
     }
 }
 
-.counter + h5, .counter + .h5 {
+.counter+h5,
+.counter+.h5 {
     letter-spacing: 0 !important;
 }
 
-.badge{
+.badge {
     &.bg-danger {
         background-color: $highlight-4 !important;
     }
@@ -360,6 +509,7 @@ a {
     &.footer-red {
         background-color: $light-2 !important;
         color: $dark-1 !important;
+        border-top: 3px solid $highlight-1;
     }
 
     .widget_nav_menu li a,
@@ -378,30 +528,42 @@ a {
 //About us
 
 #companiesIntro {
+
+    .card {
+        background: $light-1;
+        border-radius: 0px;
+
+        .card-body {
+            color: $dark-1;
+        }
+    }
+
     .card-img-top {
-        max-width: 100px;
+        max-width: 80px;
         margin: 0 auto;
     }
 }
 
 #about_vision {
-    position: relative;
-    background: url('../../assets/home-slider/pixasquare-4ojhpgKpS68-unsplash.jpg') no-repeat;
-    background-size: cover;
-    background-position: center center;
-    z-index: 0;
+    // position: relative;
+    // background: url('./../assets/home-slider/thanos-pal-g_DTWgRypfE-unsplash_2.jpg') no-repeat;
+    // background-size: cover;
+    // background-position: center center;
+    // z-index: 0;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #1b252e !important;
-        opacity: 0.85;
-        z-index: -1;
-    }
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: $light-1 !important;
+    //     opacity: 0.75;
+    //     z-index: -1;
+    // }
+
+    background: $light-2;
 }
 
 #about_resources_section {
@@ -524,10 +686,6 @@ Single Property css
     h2 {
         text-align: center;
         font-size: 3rem;
-
-        span {
-            // color: $golden !important;
-        }
     }
 
     @include media-breakpoint-down(sm) {
@@ -606,7 +764,7 @@ Single Property css
     color: $dark-1;
 }
 
-.real-estate-item-desc h3 + span {
+.real-estate-item-desc h3+span {
     color: $dark-2;
 }
 
