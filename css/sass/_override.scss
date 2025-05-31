@@ -192,6 +192,7 @@ a {
     &.sub-menu {
         .sub-menu-container {
             background: $highlight-4 !important;
+
             .menu-item {
                 .menu-link {
                     color: $light-1;
@@ -329,8 +330,16 @@ a {
 .page-title-center .page-title-row {
     align-items: center;
 
+    .page-title-content {
+        text-align: center;
+    }
+
     @include media-breakpoint-down(sm) {
         align-items: flex-start;
+
+        .page-title-content {
+            text-align: left;
+        }
     }
 }
 
@@ -602,15 +611,9 @@ a {
 }
 
 .contact-section {
-    margin-top: 70px;
 
     .h6 {
         font-family: Quicksand, sans-serif;
-    }
-
-
-    @include media-breakpoint-down(sm) {
-        margin-top: 20px
     }
 }
 
@@ -771,3 +774,13 @@ Single Property css
 /* 
 Single Property css
  */
+
+#quick-contact-form {
+
+    input,
+    textarea {
+        background: rgba($color: $highlight-4, $alpha: 0.15) !important;
+        border: 1px solid $light-1;
+        color: $dark-1;
+    }
+}

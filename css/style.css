@@ -23016,9 +23016,15 @@ body {
 .page-title-center .page-title-row {
   align-items: center;
 }
+.page-title-center .page-title-row .page-title-content {
+  text-align: center;
+}
 @media (max-width: 575.98px) {
   .page-title-center .page-title-row {
     align-items: flex-start;
+  }
+  .page-title-center .page-title-row .page-title-content {
+    text-align: left;
   }
 }
 
@@ -23227,16 +23233,8 @@ body {
   z-index: -1;
 }
 
-.contact-section {
-  margin-top: 70px;
-}
 .contact-section .h6 {
   font-family: Quicksand, sans-serif;
-}
-@media (max-width: 575.98px) {
-  .contact-section {
-    margin-top: 20px;
-  }
 }
 
 /* 
@@ -23380,6 +23378,13 @@ Single Property css
 /* 
 Single Property css
  */
+#quick-contact-form input,
+#quick-contact-form textarea {
+  background: rgba(133, 172, 171, 0.15) !important;
+  border: 1px solid #FAF7F0;
+  color: #203344;
+}
+
 /*-----------------------------------------------------------------------------------
 	shortcodes
 -----------------------------------------------------------------------------------*/
