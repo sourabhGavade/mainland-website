@@ -115,7 +115,8 @@ $before_heading-prefix: before-heading;
 		font-weight: var(--#{$cnvs-prefix}heading-block-font-weight);
 		text-transform: var(--#{$cnvs-prefix}heading-block-font-transform);
 		letter-spacing: var(--#{$cnvs-prefix}heading-block-font-spacing);
-		color: var(--#{$cnvs-prefix}heading-block-font-color);
+		// color: var(--#{$cnvs-prefix}heading-block-font-color);
+		// color: #182752;
 	}
 
 	h1 {

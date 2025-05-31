@@ -3,13 +3,13 @@
 -----------------------------------------------------------------*/
 
 :root {
-	--cnvs-themecolor: #E82053;
-	--cnvs-themecolor-rgb: 44, 62, 80;
-	--cnvs-secondary-color: #e9ac1e;
+	/* --cnvs-themecolor: #0A2463; */
+	--cnvs-themecolor: #CC553D;
+    --cnvs-themecolor-rgb: 44, 62, 80;
 	--cnvs-body-font: 'Quicksand', sans-serif;
 	--cnvs-primary-font: 'Josefin Slab', serif;
 	--cnvs-secondary-font: 'Josefin Slab', serif;
-	--logo-red: #E82053;
+	--logo-red: #0068d0;
 	--logo-blue: #77BEE9;
 	--logo-white: #ffffff;
 }
@@ -80,7 +80,7 @@
 		background-color: var(--cnvs-themecolor);
 	}
 
-	.sub-menu-container .menu-item:not(:first-child) { border-top: 1px dotted rgba(255,255,255,0.1) !important; }
+	.sub-menu-container .menu-item:not(:first-child) { border-top: 1px solid rgba(250, 247, 240,0.3) !important; }
 
 	.sub-menu-container .menu-item > .menu-link {
 		font-size: 12px;
@@ -88,7 +88,7 @@
 		font-weight: 400;
 		padding: 12px 17px;
 		color: #FFF;
-		font-family: var(--cnvs-primary-font) !important;
+		/* font-family: var(--cnvs-primary-font) !important; */
 	}
 
 	.sub-menu-container .menu-item:hover > .menu-link { padding-left: 20px; }
@@ -99,7 +99,7 @@
 	.primary-menu.dark .mega-menu-content { background-color: var(--cnvs-themecolor); }
 
 	.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item > .menu-link,
-	.primary-menu.dark .sub-menu-container .menu-item > .menu-link { color: #CCC !important; }
+	.primary-menu.dark .sub-menu-container .menu-item > .menu-link { color: #203344 !important; }
 
 	.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item:hover > .menu-link,
 	.primary-menu.dark .sub-menu-container .menu-item:hover > .menu-link {

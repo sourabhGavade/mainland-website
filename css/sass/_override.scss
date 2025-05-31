@@ -2,30 +2,77 @@
 
 // colors
 
-$light-text: #FFFFFF;
-$dark-text: #000000;
-$logo-red: #E82053;
-$light-red: rgba(232, 32, 82, 0.05);
-$light-blue: rgba(119, 189, 233, 0.1);
-$logo-blue: #77BEE9;
-$golden: #41c50d;
-$dark-blue : #1b252e;
+// $light-1: #f0f0f0;
+// $dark-text: #2C3E50;
+// $logo-red: #E82053;
+// $light-red: rgba(232, 32, 82, 0.05);
+// // $light-blue: rgba(119, 189, 233, 0.1);
+// $light-blue: #f1f1f1;
+// $logo-blue: #77BEE9;
+// $golden: rgb(255, 203, 5);
+// $dark-blue : #2C3E50;
+
+$highlight-1: #CC553D;
+$highlight-2: #B54845;
+$highlight-3: #C78E57;
+$highlight-4: #85ACAB;
+$dark-1: #203344;
+$dark-2: #182752;
+$light-1: #FAF7F0;
+$light-2: #F0EDE4;
 
 .transparent-header {
 
     #header-wrap {
-        background-color: #ffffff !important;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.701) 0%, rgba(255, 255, 255, 0) 90%) !important;
+        background-color: $light-1 !important;
+        background: $light-1;
+        // background: linear-gradient(180deg, rgba(255, 255, 255, 0.701) 0%, rgba(255, 255, 255, 0) 90%) !important;
         border-bottom: 0 !important;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
     }
 
     &.sticky-header {
         #header-wrap {
-            background-color: #ffffff !important;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%) !important;
-            border-bottom: 0 !important;
+            background-color: $light-1 !important;
+            background: linear-gradient(180deg, rgba($light-1, 1) 0%, rgba($light-1, 1) 100%) !important;
+            border-bottom: 1px solid $light-2 !important;
         }
     }
+
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    @include media-breakpoint-down(sm) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 99;
+    }
+
+    .primary-menu {
+        .menu-container {
+            padding-top: 0;
+
+            @include media-breakpoint-down(sm) {
+                padding-top: 25px;
+            }
+        }
+    }
+}
+
+#content {
+    background: $light-2;
+    background-color: $light-2;
 }
 
 .playfair-display {
@@ -38,6 +85,10 @@ $dark-blue : #1b252e;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+body {
+    color: $dark-1;
 }
 
 h1,
@@ -54,9 +105,24 @@ a {
     @extend .rubik;
 }
 
+.page-title-content h1,
+.page-title-content .h1 {
+    color: $light-1;
+}
+
+.breadcrumb {
+    .breadcrumb-item {
+        color: rgba($color: $light-1, $alpha: .6);
+
+        &.active {
+            color: $light-1;
+        }
+    }
+}
+
 .font-md {
     font-size: 1.5rem;
-    
+
     @include media-breakpoint-down(sm) {
         font-size: 1.2rem;
     }
@@ -64,55 +130,130 @@ a {
 
 .font-xl {
     font-size: 2.5rem;
-    
+
     @include media-breakpoint-down(sm) {
         font-size: 2rem;
     }
 }
 
-.text-golden-span {
-    color: $golden !important;
+.stretched #gotoTop {
+    bottom: 20px !important;
+}
+
+#floating-whatsapp-icon {
+    position: fixed;
+    z-index: 9;
+    bottom: 80px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $light-1;
+    border: 1px solid $highlight-4;
+    display: grid;
+    place-content: center;
+
+    img {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 // Header
 
-
 .menu-item {
+
 
     &:hover,
     &.current {
         .menu-link {
-            color: $golden;
+            color: $highlight-4;
+
+        }
+
+        @include media-breakpoint-down(sm) {
+            .sub-menu-container {
+                .menu-item {
+                    .menu-link {
+                        color: $dark-1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sub-menu {
+        .sub-menu-container {
+            background: $highlight-4 !important;
+
+            .menu-item {
+                .menu-link {
+                    color: $light-1;
+                }
+            }
         }
     }
 }
 
+.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item>.menu-link,
+.primary-menu.dark .sub-menu-container .menu-item>.menu-link,
+.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item.current>.menu-link,
+.primary-menu.dark .sub-menu-container .menu-item.current>.menu-link {
+
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
 .menu-link {
-    color: $dark-text;
+    color: $dark-1;
     font-size: 15px !important;
     font-weight: 500 !important;
     @extend .rubik;
-
-    &:hover {
-        color: $golden;
-    }
 }
 
 .heading-block {
     margin-bottom: 30px !important;
 
     h2 {
-        font-size: 42px !important;
+        font-size: 60px !important;
         font-weight: 700 !important;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 45px !important;
+        }
     }
 
     h3 {
-        font-size: 34px !important;
+        font-size: 50px !important;
         font-weight: 700 !important;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 35px !important;
+        }
     }
 }
 
 // Margins & Paddings
+
+.mt-50 {
+    margin-top: 50px;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 30px;
+    }
+
+}
 
 .py-25 {
     padding-top: 25px;
@@ -169,16 +310,56 @@ a {
 
 }
 
+.content-wrap {
+    padding-top: 80px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 30px;
+    }
+}
+
+.page-title {
+    padding-top: 100px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 126px;
+        padding-bottom: 80px;
+    }
+}
+
+.page-title-center .page-title-row {
+    align-items: center;
+
+    .page-title-content {
+        text-align: center;
+    }
+
+    @include media-breakpoint-down(sm) {
+        align-items: flex-start;
+
+        .page-title-content {
+            text-align: left;
+        }
+    }
+}
+
 .bg-light-red {
-    background: $light-red;
+    background: $highlight-2;
 }
 
 .bg-light-blue {
-    background: $light-blue;
+    // background: $light-blue;
+    // background: #11296B;
+    background: $dark-1;
+    // background: $dark-blue;
+}
+
+.bg-highlight {
+    background: rgba($color: $highlight-4, $alpha: 0.15) !important;
 }
 
 .bg-color {
-    background: #1b252e !important;
+    background: $dark-1 !important;
 }
 
 // Buttons
@@ -187,16 +368,44 @@ a {
     height: fit-content;
 }
 
+.button-solid-yellow {
+    // border: 3px solid rgb(255, 203, 5) !important;
+    // background: rgba(255, 203, 5, 0.7) !important;
+    // background-color: rgba(255, 203, 5, 0.7) !important;
+    // background-color: rgb(255, 203, 5);
+    border: 3px solid $highlight-1 !important;
+    background: rgba($highlight-1, 0.75) !important;
+    background-color: rgba($highlight-1, 0.75) !important;
+    background-color: $highlight-1;
+    color: $light-1 !important;
+    border-radius: 0px !important;
+    transition: all 0.3s ease-in !important;
+
+    &:hover {
+        background: rgba($highlight-1, 1) !important;
+        background-color: rgba($highlight-1, 1) !important;
+    }
+
+    &.button-yellow-outline {
+        background: transparent !important;
+        background-color: transparent !important;
+        color: $highlight-1 !important;
+
+        &:hover {
+            background: rgba($highlight-1, 1) !important;
+            background-color: rgba($highlight-1, 1) !important;
+            color: $light-1 !important;
+        }
+    }
+}
+
 // Text
 
 .text-golden {
-    color: $golden !important;
+    color: $highlight-2 !important;
 }
 
 // Misc
-.golden-line {
-    border-top-color: $golden;
-}
 
 .section {
     margin-top: 0;
@@ -204,8 +413,25 @@ a {
 }
 
 .hr_accent {
-    border-color: $logo-red;
+    border-color: $highlight-4;
     border-top-width: 2px;
+
+    &.w-80 {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.text-white {
+    color: $light-1 !important;
+}
+
+.text-white-2 {
+    color: $light-2 !important;
+}
+
+.text-dark {
+    color: $dark-1 !important;
 }
 
 //Home page slider
@@ -220,17 +446,36 @@ a {
     }
 }
 
+.counter {
+    color: $highlight-1;
+
+    span {
+        color: $highlight-1;
+    }
+}
+
+.counter+h5,
+.counter+.h5 {
+    letter-spacing: 0 !important;
+}
+
+.badge {
+    &.bg-danger {
+        background-color: $highlight-4 !important;
+    }
+}
 
 // Feature box home page
 .fbox-content h3,
 .fbox-content .h3 {
     font-size: 24px !important;
     font-weight: 700 !important;
+    color: $dark-1 !important;
 }
 
 .promo-dark {
     min-height: 20vh;
-    background-color: #000000 !important;
+    background-color: $dark-1 !important;
     display: grid;
     place-content: center;
 
@@ -264,15 +509,16 @@ a {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $dark-blue;
+        background-color: $dark-1;
         opacity: 0.75;
     }
 }
 
 #footer {
     &.footer-red {
-        background-color: $dark-text !important;
-        color: $light-text !important;
+        background-color: $light-2 !important;
+        color: $dark-1 !important;
+        border-top: 3px solid $highlight-1;
     }
 
     .widget_nav_menu li a,
@@ -284,37 +530,49 @@ a {
     .widget_categories li a,
     .widget_pages li a,
     .widget_rss li a {
-        color: $light-text !important;
+        color: $dark-1 !important;
     }
 }
 
 //About us
 
 #companiesIntro {
+
+    .card {
+        background: $light-1;
+        border-radius: 0px;
+
+        .card-body {
+            color: $dark-1;
+        }
+    }
+
     .card-img-top {
-        max-width: 100px;
+        max-width: 80px;
         margin: 0 auto;
     }
 }
 
 #about_vision {
-    position: relative;
-    background: url('../../assets/home-slider/pixasquare-4ojhpgKpS68-unsplash.jpg') no-repeat;
-    background-size: cover;
-    background-position: center center;
-    z-index: 0;
+    // position: relative;
+    // background: url('./../assets/home-slider/thanos-pal-g_DTWgRypfE-unsplash_2.jpg') no-repeat;
+    // background-size: cover;
+    // background-position: center center;
+    // z-index: 0;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #1b252e !important;
-        opacity: 0.85;
-        z-index: -1;
-    }
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: $light-1 !important;
+    //     opacity: 0.75;
+    //     z-index: -1;
+    // }
+
+    background: $light-2;
 }
 
 #about_resources_section {
@@ -353,22 +611,17 @@ a {
 }
 
 .contact-section {
-    margin-top: 70px;
+
     .h6 {
         font-family: Quicksand, sans-serif;
-    }
-
-    
-    @include media-breakpoint-down(sm) {
-        margin-top: 20px
     }
 }
 
 /* 
 Single Property css
  */
- 
- .slider-element .real-estate-info-wrap {
+
+.slider-element .real-estate-info-wrap {
     position: absolute;
     left: auto;
     bottom: 20px;
@@ -386,7 +639,7 @@ Single Property css
 
 .real-estate-price h3 {
     display: block;
-    color: #FFF;
+    color: $light-1;
     font-size: 44px;
     margin: 0;
     font-weight: 400;
@@ -401,11 +654,13 @@ Single Property css
         margin-top: 15px;
     }
 
-    .slider-element .heading-block >h2 {
+    .slider-element .heading-block>h2 {
         font-size: 24px;
     }
 
-    .slider-element .heading-block { width: auto !important; }
+    .slider-element .heading-block {
+        width: auto !important;
+    }
 }
 
 .black-overlay {
@@ -434,12 +689,8 @@ Single Property css
     h2 {
         text-align: center;
         font-size: 3rem;
-
-        span {
-            color: $golden !important;
-        }
     }
-        
+
     @include media-breakpoint-down(sm) {
         top: 20%;
         left: 12px;
@@ -457,7 +708,7 @@ Single Property css
     display: grid;
     grid-template-columns: 30% 40% 30%;
     gap: 15px;
-    
+
     @include media-breakpoint-down(sm) {
         grid-template-columns: 100%;
         gap: 12px;
@@ -497,8 +748,8 @@ Single Property css
         filter: drop-shadow(0px 2px 10px #0000002c);
 
         .card-header {
-            background-color: $golden;
-            color: $light-text;
+            // background-color: $golden;
+            color: $light-1;
             // border-radius: 0 !important;
             border: 0;
         }
@@ -512,6 +763,24 @@ Single Property css
 
 }
 
+.real-estate-item-desc h3 a {
+    color: $dark-1;
+}
+
+.real-estate-item-desc h3+span {
+    color: $dark-2;
+}
+
 /* 
 Single Property css
  */
+
+#quick-contact-form {
+
+    input,
+    textarea {
+        background: rgba($color: $highlight-4, $alpha: 0.15) !important;
+        border: 1px solid $light-1;
+        color: $dark-1;
+    }
+}
