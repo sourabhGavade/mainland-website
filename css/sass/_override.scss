@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 // colors
 
@@ -12,83 +12,85 @@
 // $golden: rgb(255, 203, 5);
 // $dark-blue : #2C3E50;
 
-$highlight-1: #CC553D;
-$highlight-2: #B54845;
-$highlight-3: #C78E57;
-$highlight-4: #85ACAB;
+$highlight-1: #cc553d;
+$highlight-2: #b54845;
+$highlight-3: #c78e57;
+$highlight-4: #85acab;
 $dark-1: #203344;
 $dark-2: #182752;
-$light-1: #FAF7F0;
-$light-2: #F0EDE4;
+$light-1: #faf7f0;
+$light-2: #f0ede4;
 
 .transparent-header {
+	#header-wrap {
+		background-color: $light-1 !important;
+		background: $light-1;
+		// background: linear-gradient(180deg, rgba(255, 255, 255, 0.701) 0%, rgba(255, 255, 255, 0) 90%) !important;
+		border-bottom: 0 !important;
 
-    #header-wrap {
-        background-color: $light-1 !important;
-        background: $light-1;
-        // background: linear-gradient(180deg, rgba(255, 255, 255, 0.701) 0%, rgba(255, 255, 255, 0) 90%) !important;
-        border-bottom: 0 !important;
+		@include media-breakpoint-down(sm) {
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+	}
 
-        @include media-breakpoint-down(sm) {
-            padding-top: 8px;
-            padding-bottom: 8px;
-        }
-    }
-
-    &.sticky-header {
-        #header-wrap {
-            background-color: $light-1 !important;
-            background: linear-gradient(180deg, rgba($light-1, 1) 0%, rgba($light-1, 1) 100%) !important;
-            border-bottom: 1px solid $light-2 !important;
-        }
-    }
-
+	&.sticky-header {
+		#header-wrap {
+			background-color: $light-1 !important;
+			background: linear-gradient(
+				180deg,
+				rgba($light-1, 1) 0%,
+				rgba($light-1, 1) 100%
+			) !important;
+			border-bottom: 1px solid $light-2 !important;
+		}
+	}
 }
 
 #header {
-    position: relative;
-    width: 100%;
-    height: auto;
+	position: relative;
+	width: 100%;
+	height: auto;
 
-    @include media-breakpoint-down(sm) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 99;
-    }
+	@include media-breakpoint-down(sm) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		z-index: 99;
+	}
 
-    .primary-menu {
-        .menu-container {
-            padding-top: 0;
+	.primary-menu {
+		.menu-container {
+			padding-top: 0;
 
-            @include media-breakpoint-down(sm) {
-                padding-top: 25px;
-            }
-        }
-    }
+			@include media-breakpoint-down(sm) {
+				padding-top: 25px;
+			}
+		}
+	}
 }
 
 #content {
-    background: $light-2;
-    background-color: $light-2;
+	background: $light-2;
+	background-color: $light-2;
 }
 
 .playfair-display {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+	font-family: "Playfair Display", serif;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 .rubik {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+	font-family: "Rubik", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 body {
-    color: $dark-1;
+	color: $dark-1;
 }
 
 h1,
@@ -97,529 +99,528 @@ h3,
 h4,
 h5,
 h6 {
-    @extend .playfair-display;
+	@extend .playfair-display;
 }
 
 p,
 a {
-    @extend .rubik;
+	@extend .rubik;
 }
 
 .page-title-content h1,
 .page-title-content .h1 {
-    color: $light-1;
+	color: $light-1;
 }
 
 .breadcrumb {
-    .breadcrumb-item {
-        color: rgba($color: $light-1, $alpha: .6);
+	.breadcrumb-item {
+		color: rgba($color: $light-1, $alpha: 0.6);
 
-        &.active {
-            color: $light-1;
-        }
-    }
+		&.active {
+			color: $light-1;
+		}
+	}
 }
 
 .font-md {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
 
-    @include media-breakpoint-down(sm) {
-        font-size: 1.2rem;
-    }
+	@include media-breakpoint-down(sm) {
+		font-size: 1.2rem;
+	}
 }
 
 .font-xl {
-    font-size: 2.5rem;
+	font-size: 2.5rem !important;
 
-    @include media-breakpoint-down(sm) {
-        font-size: 2rem;
-    }
+	@include media-breakpoint-down(sm) {
+		font-size: 2rem !important;
+	}
+}
+
+.font-xxl {
+	font-size: 3.5rem !important;
+
+	@include media-breakpoint-down(sm) {
+		font-size: 2.5rem !important;
+	}
 }
 
 .stretched #gotoTop {
-    bottom: 20px !important;
+	bottom: 20px !important;
 }
 
 #floating-whatsapp-icon {
-    position: fixed;
-    z-index: 9;
-    bottom: 80px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: $light-1;
-    border: 1px solid $highlight-4;
-    display: grid;
-    place-content: center;
+	position: fixed;
+	z-index: 9;
+	bottom: 80px;
+	right: 30px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: $light-1;
+	border: 1px solid $highlight-4;
+	display: grid;
+	place-content: center;
 
-    img {
-        width: 20px;
-        height: 20px;
-        margin: 0;
-        padding: 0;
-    }
+	img {
+		width: 20px;
+		height: 20px;
+		margin: 0;
+		padding: 0;
+	}
 
-    @include media-breakpoint-down(sm) {
-        bottom: 20px;
-        right: 20px;
-    }
+	@include media-breakpoint-down(sm) {
+		bottom: 20px;
+		right: 20px;
+	}
 }
 
 // Header
 
 .menu-item {
+	&:hover,
+	&.current {
+		.menu-link {
+			color: $highlight-4;
+		}
 
+		@include media-breakpoint-down(sm) {
+			.sub-menu-container {
+				.menu-item {
+					.menu-link {
+						color: $dark-1;
+					}
+				}
+			}
+		}
+	}
 
-    &:hover,
-    &.current {
-        .menu-link {
-            color: $highlight-4;
+	&.sub-menu {
+		.sub-menu-container {
+			background: $highlight-4 !important;
 
-        }
-
-        @include media-breakpoint-down(sm) {
-            .sub-menu-container {
-                .menu-item {
-                    .menu-link {
-                        color: $dark-1;
-                    }
-                }
-            }
-        }
-    }
-
-    &.sub-menu {
-        .sub-menu-container {
-            background: $highlight-4 !important;
-
-            .menu-item {
-                .menu-link {
-                    color: $light-1;
-                }
-            }
-        }
-    }
+			.menu-item {
+				.menu-link {
+					color: $light-1;
+				}
+			}
+		}
+	}
 }
 
-.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item>.menu-link,
-.primary-menu.dark .sub-menu-container .menu-item>.menu-link,
-.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item.current>.menu-link,
-.primary-menu.dark .sub-menu-container .menu-item.current>.menu-link {
-
-    font-size: 14px;
-    font-weight: 500;
-    font-family: "Rubik", sans-serif !important;
-    font-optical-sizing: auto;
-    font-style: normal;
-
+.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item > .menu-link,
+.primary-menu.dark .sub-menu-container .menu-item > .menu-link,
+.dark
+	.primary-menu:not(.not-dark)
+	.sub-menu-container
+	.menu-item.current
+	> .menu-link,
+.primary-menu.dark .sub-menu-container .menu-item.current > .menu-link {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Rubik", sans-serif !important;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 .menu-link {
-    color: $dark-1;
-    font-size: 15px !important;
-    font-weight: 500 !important;
-    @extend .rubik;
+	color: $dark-1;
+	font-size: 15px !important;
+	font-weight: 500 !important;
+	@extend .rubik;
 }
 
 .heading-block {
-    margin-bottom: 30px !important;
+	margin-bottom: 30px !important;
 
-    h2 {
-        font-size: 60px !important;
-        font-weight: 700 !important;
+	h2 {
+		font-size: 60px !important;
+		font-weight: 700 !important;
 
-        @include media-breakpoint-down(sm) {
-            font-size: 45px !important;
-        }
-    }
+		@include media-breakpoint-down(sm) {
+			font-size: 45px !important;
+		}
+	}
 
-    h3 {
-        font-size: 50px !important;
-        font-weight: 700 !important;
+	h3 {
+		font-size: 50px !important;
+		font-weight: 700 !important;
 
-        @include media-breakpoint-down(sm) {
-            font-size: 35px !important;
-        }
-    }
+		@include media-breakpoint-down(sm) {
+			font-size: 35px !important;
+		}
+	}
 }
 
 // Margins & Paddings
 
 .mt-50 {
-    margin-top: 50px;
+	margin-top: 50px;
 
-    @include media-breakpoint-down(sm) {
-        margin-top: 30px;
-    }
-
+	@include media-breakpoint-down(sm) {
+		margin-top: 30px;
+	}
 }
 
 .py-25 {
-    padding-top: 25px;
-    padding-bottom: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 
-    @include media-breakpoint-down(sm) {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
+	@include media-breakpoint-down(sm) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 }
 
 .py-50 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 
-    @include media-breakpoint-down(sm) {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
+	@include media-breakpoint-down(sm) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 }
 
 .py-75 {
-    padding-top: 75px;
-    padding-bottom: 75px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 
-    @include media-breakpoint-down(sm) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
+	@include media-breakpoint-down(sm) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 }
 
 .py-100 {
-    padding-top: 100px;
-    padding-bottom: 100px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 
-    @include media-breakpoint-down(sm) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
+	@include media-breakpoint-down(sm) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 }
 
 .py-150 {
-    padding-top: 150px;
-    padding-bottom: 150px;
+	padding-top: 150px;
+	padding-bottom: 150px;
 
-    @include media-breakpoint-down(sm) {
-        padding-top: 75px;
-        padding-bottom: 75px;
-    }
-
+	@include media-breakpoint-down(sm) {
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
 }
 
 .content-wrap {
-    padding-top: 80px;
+	padding-top: 80px;
 
-    @include media-breakpoint-down(sm) {
-        padding-top: 30px;
-    }
+	@include media-breakpoint-down(sm) {
+		padding-top: 30px;
+	}
 }
 
 .page-title {
-    padding-top: 100px;
+	padding-top: 100px;
 
-    @include media-breakpoint-down(sm) {
-        padding-top: 126px;
-        padding-bottom: 80px;
-    }
+	@include media-breakpoint-down(sm) {
+		padding-top: 126px;
+		padding-bottom: 80px;
+	}
 }
 
 .page-title-center .page-title-row {
-    align-items: center;
+	align-items: center;
 
-    .page-title-content {
-        text-align: center;
-    }
+	.page-title-content {
+		text-align: center;
+	}
 
-    @include media-breakpoint-down(sm) {
-        align-items: flex-start;
+	@include media-breakpoint-down(sm) {
+		align-items: flex-start;
 
-        .page-title-content {
-            text-align: left;
-        }
-    }
+		.page-title-content {
+			text-align: left;
+		}
+	}
 }
 
 .bg-light-red {
-    background: $highlight-2;
+	background: $highlight-2;
 }
 
 .bg-light-blue {
-    // background: $light-blue;
-    // background: #11296B;
-    background: $dark-1;
-    // background: $dark-blue;
+	// background: $light-blue;
+	// background: #11296B;
+	background: $dark-1;
+	// background: $dark-blue;
 }
 
 .bg-highlight {
-    background: rgba($color: $highlight-4, $alpha: 0.15) !important;
+	background: rgba($color: $highlight-4, $alpha: 0.15) !important;
 }
 
 .bg-color {
-    background: $dark-1 !important;
+	background: $dark-1 !important;
 }
 
 // Buttons
 
 .button-border {
-    height: fit-content;
+	height: fit-content;
 }
 
 .button-solid-yellow {
-    // border: 3px solid rgb(255, 203, 5) !important;
-    // background: rgba(255, 203, 5, 0.7) !important;
-    // background-color: rgba(255, 203, 5, 0.7) !important;
-    // background-color: rgb(255, 203, 5);
-    border: 3px solid $highlight-1 !important;
-    background: rgba($highlight-1, 0.75) !important;
-    background-color: rgba($highlight-1, 0.75) !important;
-    background-color: $highlight-1;
-    color: $light-1 !important;
-    border-radius: 0px !important;
-    transition: all 0.3s ease-in !important;
+	// border: 3px solid rgb(255, 203, 5) !important;
+	// background: rgba(255, 203, 5, 0.7) !important;
+	// background-color: rgba(255, 203, 5, 0.7) !important;
+	// background-color: rgb(255, 203, 5);
+	border: 3px solid $highlight-1 !important;
+	background: rgba($highlight-1, 0.75) !important;
+	background-color: rgba($highlight-1, 0.75) !important;
+	background-color: $highlight-1;
+	color: $light-1 !important;
+	border-radius: 0px !important;
+	transition: all 0.3s ease-in !important;
 
-    &:hover {
-        background: rgba($highlight-1, 1) !important;
-        background-color: rgba($highlight-1, 1) !important;
-    }
+	&:hover {
+		background: rgba($highlight-1, 1) !important;
+		background-color: rgba($highlight-1, 1) !important;
+	}
 
-    &.button-yellow-outline {
-        background: transparent !important;
-        background-color: transparent !important;
-        color: $highlight-1 !important;
+	&.button-yellow-outline {
+		background: transparent !important;
+		background-color: transparent !important;
+		color: $highlight-1 !important;
 
-        &:hover {
-            background: rgba($highlight-1, 1) !important;
-            background-color: rgba($highlight-1, 1) !important;
-            color: $light-1 !important;
-        }
-    }
+		&:hover {
+			background: rgba($highlight-1, 1) !important;
+			background-color: rgba($highlight-1, 1) !important;
+			color: $light-1 !important;
+		}
+	}
 }
 
 // Text
 
 .text-golden {
-    color: $highlight-2 !important;
+	color: $highlight-2 !important;
 }
 
 // Misc
 
 .section {
-    margin-top: 0;
-    margin-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .hr_accent {
-    border-color: $highlight-4;
-    border-top-width: 2px;
+	border-color: $highlight-4;
+	border-top-width: 2px;
 
-    &.w-80 {
-        width: 80%;
-        margin: 0 auto;
+	&.w-80 {
+		width: 80%;
+		margin: 0 auto;
 
-        @include media-breakpoint-down(sm) {
-            width: 100%;
-            margin: 0 12px;
-        }
-    }
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			margin: 0 12px;
+		}
+	}
 }
 
 .text-white {
-    color: $light-1 !important;
+	color: $light-1 !important;
 }
 
 .text-white-2 {
-    color: $light-2 !important;
+	color: $light-2 !important;
 }
 
 .text-dark {
-    color: $dark-1 !important;
+	color: $dark-1 !important;
 }
 
 //Home page slider
 
 #slider {
-
-    .tp-caption {
-
-        &.revo-slider-emphasis-text {
-            font-family: "Josefin Slab, serif" !important;
-        }
-    }
+	.tp-caption {
+		&.revo-slider-emphasis-text {
+			font-family: "Josefin Slab, serif" !important;
+		}
+	}
 }
 
 .counter {
-    color: $highlight-1;
+	color: $highlight-1;
 
-    span {
-        color: $highlight-1;
-    }
+	span {
+		color: $highlight-1;
+	}
 }
 
-.counter+h5,
-.counter+.h5 {
-    letter-spacing: 0 !important;
+.counter + h5,
+.counter + .h5 {
+	letter-spacing: 0 !important;
 }
 
 .badge {
-    &.bg-danger {
-        background-color: $highlight-4 !important;
-    }
+	&.bg-danger {
+		background-color: $highlight-4 !important;
+	}
 }
 
 // Feature box home page
 .fbox-content h3,
 .fbox-content .h3 {
-    font-size: 24px !important;
-    font-weight: 700 !important;
-    color: $dark-1 !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	color: $dark-1 !important;
 }
 
 .promo-dark {
-    min-height: 20vh;
-    background-color: $dark-1 !important;
-    display: grid;
-    place-content: center;
+	min-height: 20vh;
+	background-color: $dark-1 !important;
+	display: grid;
+	place-content: center;
 
-    .fw-normal {
-        font-weight: 600 !important;
-        font-size: 28px !important;
-    }
+	.fw-normal {
+		font-weight: 600 !important;
+		font-size: 28px !important;
+	}
 }
 
 .real-estate-item {
-    .real-estate-item-image {
-        img {
-            width: 100%;
-            aspect-ratio: 7/5;
-            object-fit: cover;
-            object-position: top center;
-        }
-    }
+	.real-estate-item-image {
+		img {
+			width: 100%;
+			aspect-ratio: 7/5;
+			object-fit: cover;
+			object-position: top center;
+		}
+	}
 }
 
 #home_mainland_builders {
-    position: relative;
-    background: url('./../assets/DSC00381.JPG') no-repeat;
-    background-size: cover;
-    background-position: center center;
+	position: relative;
+	background: url("./../assets/DSC00381.JPG") no-repeat;
+	background-size: cover;
+	background-position: center center;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: $dark-1;
-        opacity: 0.75;
-    }
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $dark-1;
+		opacity: 0.75;
+	}
 }
 
 #footer {
-    &.footer-red {
-        background-color: $light-2 !important;
-        color: $dark-1 !important;
-        border-top: 3px solid $highlight-1;
-    }
+	&.footer-red {
+		background-color: $light-2 !important;
+		color: $dark-1 !important;
+		border-top: 3px solid $highlight-1;
+	}
 
-    .widget_nav_menu li a,
-    .widget_links li a,
-    .widget_meta li a,
-    .widget_archive li a,
-    .widget_recent_comments li a,
-    .widget_recent_entries li a,
-    .widget_categories li a,
-    .widget_pages li a,
-    .widget_rss li a {
-        color: $dark-1 !important;
-    }
+	.widget_nav_menu li a,
+	.widget_links li a,
+	.widget_meta li a,
+	.widget_archive li a,
+	.widget_recent_comments li a,
+	.widget_recent_entries li a,
+	.widget_categories li a,
+	.widget_pages li a,
+	.widget_rss li a {
+		color: $dark-1 !important;
+	}
 }
 
 //About us
 
 #companiesIntro {
+	.card {
+		background: $light-1;
+		border-radius: 0px;
+		height: 100%;
 
-    .card {
-        background: $light-1;
-        border-radius: 0px;
+		.card-body {
+			color: $dark-1;
+		}
+	}
 
-        .card-body {
-            color: $dark-1;
-        }
-    }
-
-    .card-img-top {
-        max-width: 80px;
-        margin: 0 auto;
-    }
+	.card-img-top {
+		max-width: 80px;
+		margin: 0 auto;
+	}
 }
 
 #about_vision {
-    // position: relative;
-    // background: url('./../assets/home-slider/thanos-pal-g_DTWgRypfE-unsplash_2.jpg') no-repeat;
-    // background-size: cover;
-    // background-position: center center;
-    // z-index: 0;
+	// position: relative;
+	// background: url('./../assets/home-slider/thanos-pal-g_DTWgRypfE-unsplash_2.jpg') no-repeat;
+	// background-size: cover;
+	// background-position: center center;
+	// z-index: 0;
 
-    // &:before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     background: $light-1 !important;
-    //     opacity: 0.75;
-    //     z-index: -1;
-    // }
+	// &:before {
+	//     content: '';
+	//     position: absolute;
+	//     top: 0;
+	//     left: 0;
+	//     width: 100%;
+	//     height: 100%;
+	//     background: $light-1 !important;
+	//     opacity: 0.75;
+	//     z-index: -1;
+	// }
 
-    background: $light-2;
+	background: $light-2;
 }
 
 #about_resources_section {
-    position: relative;
-    z-index: 0;
+	position: relative;
+	z-index: 0;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 7%;
-        right: 0%;
-        width: 70%;
-        height: 50%;
-        background: url('../../assets/home-slider/pixasquare-4ojhpgKpS68-unsplash.jpg') no-repeat;
-        background-size: contain;
-        background-position: center right;
-        opacity: 0.85;
-        z-index: -1;
-    }
+	&:before {
+		content: "";
+		position: absolute;
+		top: 7%;
+		right: 0%;
+		width: 70%;
+		height: 50%;
+		background: url("../../assets/home-slider/pixasquare-4ojhpgKpS68-unsplash.jpg")
+			no-repeat;
+		background-size: contain;
+		background-position: center right;
+		opacity: 0.85;
+		z-index: -1;
+	}
 }
 
 .tp-bgimg {
-    position: relative;
-    z-index: 0;
+	position: relative;
+	z-index: 0;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #00000045;
-        z-index: -1;
-    }
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #00000045;
+		z-index: -1;
+	}
 }
 
 .contact-section {
-
-    .h6 {
-        // font-family: Quicksand, sans-serif;
-    }
+	.h6 {
+		// font-family: Quicksand, sans-serif;
+	}
 }
 
 /* 
@@ -627,169 +628,174 @@ Single Property css
  */
 
 .slider-element .real-estate-info-wrap {
-    position: absolute;
-    left: auto;
-    bottom: 20px;
-    width: calc(100% - 24px);
+	position: absolute;
+	left: auto;
+	bottom: 20px;
+	width: calc(100% - 24px);
 }
 
 .real-estate-price {
-    position: absolute;
-    top: auto;
-    left: auto;
-    right: 0;
-    bottom: 50px;
-    z-index: 1;
+	position: absolute;
+	top: auto;
+	left: auto;
+	right: 0;
+	bottom: 50px;
+	z-index: 1;
 }
 
 .real-estate-price h3 {
-    display: block;
-    color: $light-1;
-    font-size: 44px;
-    margin: 0;
-    font-weight: 400;
+	display: block;
+	color: $light-1;
+	font-size: 44px;
+	margin: 0;
+	font-weight: 400;
 }
 
 @media (max-width: 991px) {
-    .real-estate-price {
-        position: relative;
-        top: auto;
-        bottom: auto;
-        right: 0;
-        margin-top: 15px;
-    }
+	.real-estate-price {
+		position: relative;
+		top: auto;
+		bottom: auto;
+		right: 0;
+		margin-top: 15px;
+	}
 
-    .slider-element .heading-block>h2 {
-        font-size: 24px;
-    }
+	.slider-element .heading-block > h2 {
+		font-size: 24px;
+	}
 
-    .slider-element .heading-block {
-        width: auto !important;
-    }
+	.slider-element .heading-block {
+		width: auto !important;
+	}
 }
 
 .black-overlay {
-    position: relative;
-    z-index: 0;
+	position: relative;
+	z-index: 0;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #0000006d;
-        z-index: 0;
-    }
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.7);
+		z-index: 0;
+	}
 }
 
 .single-property-tagline-container {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
 
-    h2 {
-        text-align: center;
-        font-size: 3rem;
-    }
+	h2 {
+		text-align: center;
+		font-size: 3rem;
+	}
 
-    @include media-breakpoint-down(sm) {
-        top: 20%;
-        left: 12px;
-        width: calc(100% - 24px);
-        transform: unset;
+	@include media-breakpoint-down(sm) {
+		top: 20%;
+		left: 12px;
+		width: calc(100% - 24px);
+		transform: unset;
 
-        h2 {
-            font-size: 2rem;
-            text-align: left;
-        }
-    }
+		h2 {
+			font-size: 2rem;
+			text-align: left;
+		}
+	}
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    gap: 15px;
+	display: grid;
+	grid-template-columns: 30% 40% 30%;
+	gap: 15px;
 
-    @include media-breakpoint-down(sm) {
-        grid-template-columns: 100%;
-        gap: 12px;
-    }
+	&.cols-2 {
+		grid-template-columns: 50% 50%;
+	}
 
-    a {
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        text-decoration: none;
-        overflow: hidden;
+	@include media-breakpoint-down(sm) {
+		grid-template-columns: 100%;
+		gap: 12px;
+	}
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: scale(1);
-            transition: 0.6s ease-in-out;
-        }
+	a {
+		width: 100%;
+		height: 100%;
+		max-height: 300px;
+		background-color: transparent;
+		text-decoration: none;
+		overflow: hidden;
 
-        &:hover {
-            background: none;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+            object-position: center center;
+			transform: scale(1);
+			transition: 0.6s ease-in-out;
+		}
 
-            img {
-                transform: scale(1.05);
-            }
-        }
-    }
+		&:hover {
+			background: none;
+
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
 }
 
 .form-widget {
-    border-radius: 0 !important;
+	border-radius: 0 !important;
 
-    .card {
-        border-radius: 0 !important;
-        background-color: $dark-1;
-        border: 0;
-        filter: drop-shadow(0px 2px 10px #0000002c);
+	.card {
+		border-radius: 0 !important;
+		background-color: $dark-1;
+		border: 0;
+		filter: drop-shadow(0px 2px 10px #0000002c);
 
-        .card-header {
-            border: 0;
-            border-radius: 0 !important;
-        }
+		.card-header {
+			border: 0;
+			border-radius: 0 !important;
+		}
 
-        form {
+		#quick-contact-form {
+			input,
+			textarea {
+				color: $light-1 !important;
 
-            input,
-            textarea {
-                color: $light-1 !important;
-
-                &::placeholder {
-                    color: rgba($color: $light-1, $alpha: 0.6);
-                }
-            }
-        }
-    }
-
+				&::placeholder {
+					color: rgba($color: $light-1, $alpha: 0.6);
+				}
+			}
+		}
+	}
 }
 
 .real-estate-item-desc h3 a {
-    color: $dark-1;
+	color: $dark-1;
 }
 
-.real-estate-item-desc h3+span {
-    color: $dark-2;
+.real-estate-item-desc h3 + span {
+	color: $dark-2;
 }
 
 .iconlist {
-    padding-bottom: inherit;
-    li {
-        flex-wrap: nowrap !important;
-    }
+	padding-bottom: inherit;
 
-    @include media-breakpoint-up(md) {
-        margin-bottom: 8px;
-    }
+	li {
+		flex-wrap: nowrap !important;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 8px;
+	}
 }
 
 /* 
@@ -797,12 +803,53 @@ Single Property css
  */
 
 #quick-contact-form {
+	input,
+	textarea,
+	select {
+		background: rgba($color: $highlight-4, $alpha: 0.15) !important;
+		border: 1px solid $light-1;
+		color: rgba($color: $dark-1, $alpha: 0.85);
+		border-radius: 0 !important;
+		transition: all 0.2s ease-in-out;
 
-    input,
-    textarea {
-        background: rgba($color: $highlight-4, $alpha: 0.15) !important;
-        border: 1px solid $light-1;
-        color: $dark-1;
-        border-radius: 0 !important;
-    }
+		&::placeholder {
+			color: $dark-1;
+		}
+
+		&:focus {
+			border: 1px solid $highlight-4;
+			box-shadow: none !important;
+			color: $dark-1;
+		}
+	}
+}
+
+.landmarks-table {
+	border: 1px solid $highlight-4;
+	border-collapse: collapse;
+
+	th,
+	td {
+		border: 1px solid $highlight-4;
+	}
+	thead {
+		tr {
+			background: $dark-1;
+			th {
+				padding-right: 25px;
+				min-width: 150px;
+				color: $light-1;
+				padding: 10px 15px;
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			td {
+				padding: 10px 15px;
+				color: $dark-1;
+			}
+		}
+	}
 }

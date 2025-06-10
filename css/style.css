@@ -22744,8 +22744,8 @@ td.actions {
 }
 
 .transparent-header #header-wrap {
-  background-color: #FAF7F0 !important;
-  background: #FAF7F0;
+  background-color: #faf7f0 !important;
+  background: #faf7f0;
   border-bottom: 0 !important;
 }
 @media (max-width: 575.98px) {
@@ -22755,9 +22755,9 @@ td.actions {
   }
 }
 .transparent-header.sticky-header #header-wrap {
-  background-color: #FAF7F0 !important;
+  background-color: #faf7f0 !important;
   background: linear-gradient(180deg, #faf7f0 0%, #faf7f0 100%) !important;
-  border-bottom: 1px solid #F0EDE4 !important;
+  border-bottom: 1px solid #f0ede4 !important;
 }
 
 #header {
@@ -22785,8 +22785,8 @@ td.actions {
 }
 
 #content {
-  background: #F0EDE4;
-  background-color: #F0EDE4;
+  background: #f0ede4;
+  background-color: #f0ede4;
 }
 
 .playfair-display, h1, .h1,
@@ -22818,14 +22818,14 @@ body {
 
 .page-title-content h1,
 .page-title-content .h1 {
-  color: #FAF7F0;
+  color: #faf7f0;
 }
 
 .breadcrumb .breadcrumb-item {
   color: rgba(250, 247, 240, 0.6);
 }
 .breadcrumb .breadcrumb-item.active {
-  color: #FAF7F0;
+  color: #faf7f0;
 }
 
 .font-md {
@@ -22838,11 +22838,20 @@ body {
 }
 
 .font-xl {
-  font-size: 2.5rem;
+  font-size: 2.5rem !important;
 }
 @media (max-width: 575.98px) {
   .font-xl {
-    font-size: 2rem;
+    font-size: 2rem !important;
+  }
+}
+
+.font-xxl {
+  font-size: 3.5rem !important;
+}
+@media (max-width: 575.98px) {
+  .font-xxl {
+    font-size: 2.5rem !important;
   }
 }
 
@@ -22858,8 +22867,8 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #FAF7F0;
-  border: 1px solid #85ACAB;
+  background: #faf7f0;
+  border: 1px solid #85acab;
   display: grid;
   place-content: center;
 }
@@ -22877,7 +22886,7 @@ body {
 }
 
 .menu-item:hover .menu-link, .menu-item.current .menu-link {
-  color: #85ACAB;
+  color: #85acab;
 }
 @media (max-width: 575.98px) {
   .menu-item:hover .sub-menu-container .menu-item .menu-link, .menu-item.current .sub-menu-container .menu-item .menu-link {
@@ -22885,10 +22894,10 @@ body {
   }
 }
 .menu-item.sub-menu .sub-menu-container {
-  background: #85ACAB !important;
+  background: #85acab !important;
 }
 .menu-item.sub-menu .sub-menu-container .menu-item .menu-link {
-  color: #FAF7F0;
+  color: #faf7f0;
 }
 
 .dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item > .menu-link,
@@ -23029,7 +23038,7 @@ body {
 }
 
 .bg-light-red {
-  background: #B54845;
+  background: #b54845;
 }
 
 .bg-light-blue {
@@ -23050,11 +23059,11 @@ body {
 }
 
 .button-solid-yellow {
-  border: 3px solid #CC553D !important;
+  border: 3px solid #cc553d !important;
   background: rgba(204, 85, 61, 0.75) !important;
   background-color: rgba(204, 85, 61, 0.75) !important;
-  background-color: #CC553D;
-  color: #FAF7F0 !important;
+  background-color: #cc553d;
+  color: #faf7f0 !important;
   border-radius: 0px !important;
   transition: all 0.3s ease-in !important;
 }
@@ -23065,16 +23074,16 @@ body {
 .button-solid-yellow.button-yellow-outline {
   background: transparent !important;
   background-color: transparent !important;
-  color: #CC553D !important;
+  color: #cc553d !important;
 }
 .button-solid-yellow.button-yellow-outline:hover {
   background: #cc553d !important;
   background-color: #cc553d !important;
-  color: #FAF7F0 !important;
+  color: #faf7f0 !important;
 }
 
 .text-golden {
-  color: #B54845 !important;
+  color: #b54845 !important;
 }
 
 .section {
@@ -23083,7 +23092,7 @@ body {
 }
 
 .hr_accent {
-  border-color: #85ACAB;
+  border-color: #85acab;
   border-top-width: 2px;
 }
 .hr_accent.w-80 {
@@ -23098,11 +23107,11 @@ body {
 }
 
 .text-white {
-  color: #FAF7F0 !important;
+  color: #faf7f0 !important;
 }
 
 .text-white-2 {
-  color: #F0EDE4 !important;
+  color: #f0ede4 !important;
 }
 
 .text-dark {
@@ -23114,10 +23123,10 @@ body {
 }
 
 .counter {
-  color: #CC553D;
+  color: #cc553d;
 }
 .counter span {
-  color: #CC553D;
+  color: #cc553d;
 }
 
 .counter + h5,
@@ -23126,7 +23135,7 @@ body {
 }
 
 .badge.bg-danger {
-  background-color: #85ACAB !important;
+  background-color: #85acab !important;
 }
 
 .fbox-content h3,
@@ -23174,9 +23183,9 @@ body {
 }
 
 #footer.footer-red {
-  background-color: #F0EDE4 !important;
+  background-color: #f0ede4 !important;
   color: #203344 !important;
-  border-top: 3px solid #CC553D;
+  border-top: 3px solid #cc553d;
 }
 #footer .widget_nav_menu li a,
 #footer .widget_links li a,
@@ -23191,8 +23200,9 @@ body {
 }
 
 #companiesIntro .card {
-  background: #FAF7F0;
+  background: #faf7f0;
   border-radius: 0px;
+  height: 100%;
 }
 #companiesIntro .card .card-body {
   color: #203344;
@@ -23203,7 +23213,7 @@ body {
 }
 
 #about_vision {
-  background: #F0EDE4;
+  background: #f0ede4;
 }
 
 #about_resources_section {
@@ -23260,7 +23270,7 @@ Single Property css
 
 .real-estate-price h3, .real-estate-price .h3 {
   display: block;
-  color: #FAF7F0;
+  color: #faf7f0;
   font-size: 44px;
   margin: 0;
   font-weight: 400;
@@ -23292,7 +23302,7 @@ Single Property css
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4274509804);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
 
@@ -23325,6 +23335,9 @@ Single Property css
   grid-template-columns: 30% 40% 30%;
   gap: 15px;
 }
+.gallery-grid.cols-2 {
+  grid-template-columns: 50% 50%;
+}
 @media (max-width: 575.98px) {
   .gallery-grid {
     grid-template-columns: 100%;
@@ -23334,6 +23347,7 @@ Single Property css
 .gallery-grid a {
   width: 100%;
   height: 100%;
+  max-height: 300px;
   background-color: transparent;
   text-decoration: none;
   overflow: hidden;
@@ -23343,6 +23357,8 @@ Single Property css
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
   transform: scale(1);
   transition: 0.6s ease-in-out;
 }
@@ -23366,15 +23382,15 @@ Single Property css
   border: 0;
   border-radius: 0 !important;
 }
-.form-widget .card form input,
-.form-widget .card form textarea {
-  color: #FAF7F0 !important;
+.form-widget .card #quick-contact-form input,
+.form-widget .card #quick-contact-form textarea {
+  color: #faf7f0 !important;
 }
-.form-widget .card form input::-moz-placeholder, .form-widget .card form textarea::-moz-placeholder {
+.form-widget .card #quick-contact-form input::-moz-placeholder, .form-widget .card #quick-contact-form textarea::-moz-placeholder {
   color: rgba(250, 247, 240, 0.6);
 }
-.form-widget .card form input::placeholder,
-.form-widget .card form textarea::placeholder {
+.form-widget .card #quick-contact-form input::placeholder,
+.form-widget .card #quick-contact-form textarea::placeholder {
   color: rgba(250, 247, 240, 0.6);
 }
 
@@ -23402,11 +23418,50 @@ Single Property css
 Single Property css
  */
 #quick-contact-form input,
-#quick-contact-form textarea {
+#quick-contact-form textarea,
+#quick-contact-form select {
   background: rgba(133, 172, 171, 0.15) !important;
-  border: 1px solid #FAF7F0;
-  color: #203344;
+  border: 1px solid #faf7f0;
+  color: rgba(32, 51, 68, 0.85);
   border-radius: 0 !important;
+  transition: all 0.2s ease-in-out;
+}
+#quick-contact-form input::-moz-placeholder, #quick-contact-form textarea::-moz-placeholder, #quick-contact-form select::-moz-placeholder {
+  color: #203344;
+}
+#quick-contact-form input::placeholder,
+#quick-contact-form textarea::placeholder,
+#quick-contact-form select::placeholder {
+  color: #203344;
+}
+#quick-contact-form input:focus,
+#quick-contact-form textarea:focus,
+#quick-contact-form select:focus {
+  border: 1px solid #85acab;
+  box-shadow: none !important;
+  color: #203344;
+}
+
+.landmarks-table {
+  border: 1px solid #85acab;
+  border-collapse: collapse;
+}
+.landmarks-table th,
+.landmarks-table td {
+  border: 1px solid #85acab;
+}
+.landmarks-table thead tr {
+  background: #203344;
+}
+.landmarks-table thead tr th {
+  padding-right: 25px;
+  min-width: 150px;
+  color: #faf7f0;
+  padding: 10px 15px;
+}
+.landmarks-table tbody tr td {
+  padding: 10px 15px;
+  color: #203344;
 }
 
 /*-----------------------------------------------------------------------------------
