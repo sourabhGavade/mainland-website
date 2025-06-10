@@ -22838,11 +22838,20 @@ body {
 }
 
 .font-xl {
-  font-size: 2.5rem;
+  font-size: 2.5rem !important;
 }
 @media (max-width: 575.98px) {
   .font-xl {
-    font-size: 2rem;
+    font-size: 2rem !important;
+  }
+}
+
+.font-xxl {
+  font-size: 3.5rem !important;
+}
+@media (max-width: 575.98px) {
+  .font-xxl {
+    font-size: 2.5rem !important;
   }
 }
 
@@ -23193,6 +23202,7 @@ body {
 #companiesIntro .card {
   background: #FAF7F0;
   border-radius: 0px;
+  height: 100%;
 }
 #companiesIntro .card .card-body {
   color: #203344;
@@ -23292,7 +23302,7 @@ Single Property css
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4274509804);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
 
@@ -23366,15 +23376,15 @@ Single Property css
   border: 0;
   border-radius: 0 !important;
 }
-.form-widget .card form input,
-.form-widget .card form textarea {
+.form-widget .card #quick-contact-form input,
+.form-widget .card #quick-contact-form textarea {
   color: #FAF7F0 !important;
 }
-.form-widget .card form input::-moz-placeholder, .form-widget .card form textarea::-moz-placeholder {
+.form-widget .card #quick-contact-form input::-moz-placeholder, .form-widget .card #quick-contact-form textarea::-moz-placeholder {
   color: rgba(250, 247, 240, 0.6);
 }
-.form-widget .card form input::placeholder,
-.form-widget .card form textarea::placeholder {
+.form-widget .card #quick-contact-form input::placeholder,
+.form-widget .card #quick-contact-form textarea::placeholder {
   color: rgba(250, 247, 240, 0.6);
 }
 
@@ -23402,11 +23412,49 @@ Single Property css
 Single Property css
  */
 #quick-contact-form input,
-#quick-contact-form textarea {
+#quick-contact-form textarea,
+#quick-contact-form select {
   background: rgba(133, 172, 171, 0.15) !important;
   border: 1px solid #FAF7F0;
-  color: #203344;
+  color: rgba(32, 51, 68, 0.85);
   border-radius: 0 !important;
+  transition: all 0.2s ease-in-out;
+}
+#quick-contact-form input::-moz-placeholder, #quick-contact-form textarea::-moz-placeholder, #quick-contact-form select::-moz-placeholder {
+  color: #203344;
+}
+#quick-contact-form input::placeholder,
+#quick-contact-form textarea::placeholder,
+#quick-contact-form select::placeholder {
+  color: #203344;
+}
+#quick-contact-form input:focus,
+#quick-contact-form textarea:focus,
+#quick-contact-form select:focus {
+  border: 1px solid #85ACAB;
+  box-shadow: none !important;
+  color: #203344;
+}
+
+.landmarks-table {
+  border: 1px solid #85ACAB;
+  border-collapse: collapse;
+}
+.landmarks-table th, .landmarks-table td {
+  border: 1px solid #85ACAB;
+}
+.landmarks-table thead tr {
+  background: #203344;
+}
+.landmarks-table thead tr th {
+  padding-right: 25px;
+  min-width: 150px;
+  color: #FAF7F0;
+  padding: 10px 15px;
+}
+.landmarks-table tbody tr td {
+  padding: 10px 15px;
+  color: #203344;
 }
 
 /*-----------------------------------------------------------------------------------

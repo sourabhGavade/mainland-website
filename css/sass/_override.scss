@@ -129,10 +129,18 @@ a {
 }
 
 .font-xl {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
 
     @include media-breakpoint-down(sm) {
-        font-size: 2rem;
+        font-size: 2rem !important;
+    }
+}
+
+.font-xxl {
+    font-size: 3.5rem !important;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 2.5rem !important;
     }
 }
 
@@ -546,6 +554,7 @@ a {
     .card {
         background: $light-1;
         border-radius: 0px;
+        height: 100%;
 
         .card-body {
             color: $dark-1;
@@ -679,7 +688,7 @@ Single Property css
         left: 0;
         width: 100%;
         height: 100%;
-        background: #0000006d;
+        background: rgba(0, 0, 0, 0.7);
         z-index: 0;
     }
 }
@@ -758,7 +767,7 @@ Single Property css
             border-radius: 0 !important;
         }
 
-        form {
+        #quick-contact-form {
 
             input,
             textarea {
@@ -770,7 +779,6 @@ Single Property css
             }
         }
     }
-
 }
 
 .real-estate-item-desc h3 a {
@@ -783,6 +791,7 @@ Single Property css
 
 .iconlist {
     padding-bottom: inherit;
+
     li {
         flex-wrap: nowrap !important;
     }
@@ -799,10 +808,52 @@ Single Property css
 #quick-contact-form {
 
     input,
-    textarea {
+    textarea,
+    select {
         background: rgba($color: $highlight-4, $alpha: 0.15) !important;
         border: 1px solid $light-1;
-        color: $dark-1;
+        color: rgba($color: $dark-1, $alpha: 0.85);
         border-radius: 0 !important;
+        transition: all 0.2s ease-in-out;
+
+        &::placeholder {
+            color: $dark-1;
+        }
+
+        &:focus {
+            border: 1px solid $highlight-4;
+            box-shadow: none !important;
+            color: $dark-1;
+        }
+    }
+}
+
+.landmarks-table {
+    border: 1px solid $highlight-4;
+    border-collapse: collapse;
+
+    th, td {
+        border: 1px solid $highlight-4;
+    }
+    thead {
+
+        tr {
+            background: $dark-1;
+            th {
+                padding-right: 25px;
+                min-width: 150px;
+                color: $light-1;
+                padding: 10px 15px;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                padding: 10px 15px;
+                color: $dark-1;
+            }
+        }
     }
 }
