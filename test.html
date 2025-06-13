@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formspark Test</title>
+</head>
+<body>
+  <h2>Formspark Test Form</h2>
+
+  <form id="quick-contact-form">
+    <input type="text" name="name" placeholder="Full Name" required /><br />
+    <input type="email" name="email" placeholder="Email Address" required /><br />
+    <textarea name="message" placeholder="Your Message" required></textarea><br />
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("quick-contact-form");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        // Debug print formData
+        for (let [key, value] of formData.entries()) {
+          console.log(`${key}: ${value}`);
+        }
+
+        try {
+          const response = await axios.post(
+            "https://submit-form.com/shX1A9jBa", // ✅ Replace with your Formspark ID if different
+            formData,
+            {
+              headers: {
+                Accept: "application/json"
+                // ⚠️ DO NOT set Content-Type here
+              },
+            }
+          );
+
+          alert("Form submitted successfully!");
+          console.log("Response:", response.data);
+          form.reset();
+        } catch (error) {
+          alert("Submission failed.");
+          console.error("Error submitting form:", error);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
