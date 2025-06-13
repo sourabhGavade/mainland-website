@@ -22833,7 +22833,7 @@ body {
 }
 @media (max-width: 575.98px) {
   .font-md {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -22842,7 +22842,7 @@ body {
 }
 @media (max-width: 575.98px) {
   .font-xl {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
   }
 }
 
@@ -22851,7 +22851,7 @@ body {
 }
 @media (max-width: 575.98px) {
   .font-xxl {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
 }
 
@@ -23080,6 +23080,9 @@ body {
   background: #cc553d !important;
   background-color: #cc553d !important;
   color: #faf7f0 !important;
+}
+.button-solid-yellow.button-wrap {
+  text-wrap: auto !important;
 }
 
 .text-golden {
@@ -23393,6 +23396,10 @@ Single Property css
 .form-widget .card #quick-contact-form textarea::placeholder {
   color: rgba(250, 247, 240, 0.6);
 }
+.form-widget .card #quick-contact-form input.error,
+.form-widget .card #quick-contact-form textarea.error {
+  border: 1px solid #cc553d;
+}
 
 .real-estate-item-desc h3 a, .real-estate-item-desc .h3 a {
   color: #203344;
@@ -23440,6 +23447,11 @@ Single Property css
   border: 1px solid #85acab;
   box-shadow: none !important;
   color: #203344;
+}
+#quick-contact-form input.error,
+#quick-contact-form textarea.error,
+#quick-contact-form select.error {
+  border: 1px solid #cc553d;
 }
 
 .landmarks-table {

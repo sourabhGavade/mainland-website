@@ -64,7 +64,7 @@
 							<!-- Logo
 						============================================= -->
 							<div id="logo">
-								<a href="index.html">
+								<a href="../index.html">
 									<img
 										class="logo-default"
 										srcset="../assets/Mainland_Logo.png"
@@ -153,7 +153,7 @@
 				class="slider-element dark parallax scroll-detect include-header include-topbar black-overlay"
 				style="height: 550px"
 			>
-				<img src="../assets/ongoing/bella-casa.jpg" class="parallax-bg" />
+				<img src="../assets/ongoing/bella-casa-1.JPG" class="parallax-bg" />
 				<div class="container z-2">
 					<div class="single-property-tagline-container">
 						<h2 class="me-auto font-xxl">
@@ -357,11 +357,11 @@
 													</h3>
 												</div>
 												<div class="card-body rounded-0">
-													<div class="form-result"></div>
+													<div id="form-result"></div>
 													<form
 														id="quick-contact-form"
 														name="quick-contact-form"
-														action="https://submit-form.com/3Vtiukplp"
+														action="https://submit-form.com/shX1A9jBa"
 														method="post"
 														class="quick-contact-form mb-0"
 													>
@@ -397,6 +397,14 @@
 															value=""
 															autocomplete="phone"
 															placeholder="Phone Number"
+														/>
+														<input
+															type="number"
+															class="required form-control number mb-2"
+															id="quick-contact-form-property"
+															name="property"
+															value="Bella Casa"
+															hidden
 														/>
 														<textarea
 															class="required form-control mb-2 short-textarea"
@@ -719,5 +727,24 @@
 	============================================= -->
 		<script src="../js/plugins.min.js"></script>
 		<script src="../js/functions.bundle.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const form = document.getElementById("quick-contact-form");
+				const mes = document.getElementById("form-result");
+				form.addEventListener("submit", async (e) => {
+					console.log("submit");
+					mes.style.height = "auto";
+					mes.innerHTML = `<h5 class="rubik" style="color:#ffffff;">Submitted</h5>`;
+					mes.style.transition = "all 0.25s ease";
+					setTimeout(() => {
+						mes.style.opacity = "0";
+					}, 3000);
+					setTimeout(() => {
+						mes.style.height = "0px";
+					}, 3500);
+				});
+			});
+		</script>
 	</body>
 </html>
