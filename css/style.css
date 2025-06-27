@@ -23085,6 +23085,21 @@ body {
   text-wrap: auto !important;
 }
 
+.project-certificate-cta {
+  font-size: 14px !important;
+  text-align: left !important;
+  height: auto !important;
+  margin: 5px !important;
+}
+@media (max-width: 575.98px) {
+  .project-certificate-cta {
+    margin: 5px 0 !important;
+  }
+}
+.project-certificate-cta i {
+  margin: 0 auto !important;
+}
+
 .text-golden {
   color: #b54845 !important;
 }

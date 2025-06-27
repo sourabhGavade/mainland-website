@@ -402,6 +402,21 @@ a {
 	}
 }
 
+.project-certificate-cta {
+	font-size: 14px !important;
+	text-align: left !important;
+	height: auto !important;
+	margin: 5px!important;
+	
+	@include media-breakpoint-down(sm) {
+		margin: 5px 0 !important;
+	}
+
+	i {
+		margin: 0 auto !important;
+	}
+}
+
 // Text
 
 .text-golden {
